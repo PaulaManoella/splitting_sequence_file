@@ -20,19 +20,6 @@ regex_srr1 = re.findall(r"@SRR29288960\.(?:[1-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-9][
 regex_srr2 = re.findall(r"@SRR29288960\.(?:[1-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-9][0-9]{3}|[1-9][0-9]{4}|[1-9][0-9]{5}|[1-2][0-9]{6}|2500000)\.2.*?(?=@SRR29288960\.(?:[1-9]|[1-9][0-9]|[1-9][0-9]{2}|[1-9][0-9]{3}|[1-9][0-9]{4}|[1-9][0-9]{5}|[1-2][0-9]{6}|2500000)\.1|$)", file, flags=re.DOTALL)
 
 
-#if regex_srr1:
- #   for part in regex_srr1:
-  #      print(part.strip())
-
-#else:
- #   print("Sequência não encontrada")
-
-print("\nSRR2\n")
-
-#if regex_srr2:
- #   for part in regex_srr2:
-  #      print(part.strip())
-
 #cria um arquivo txt contendo as sequencias srr1
 with open('SRR29288960.sra_1.txt', 'a') as arquivo:
     for i in range(len(regex_srr1)):
